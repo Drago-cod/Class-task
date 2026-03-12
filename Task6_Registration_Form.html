@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Task1_Department_Page.html">Departments</a>
+            <a href="Task4_Timetable.html">Timetable</a>
+            <a href="Task6_Registration_Form.html">Registration</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Student Registration Form</h1>
+        <p>Please fill out all required fields marked with an asterisk (*)</p>
+
+        <form action="#" method="post">
+            
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div>
+                    <label for="firstName">First Name: *</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
+                </div>
+
+                <div>
+                    <label for="lastName">Last Name: *</label>
+                    <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
+                </div>
+
+                <div>
+                    <label for="middleName">Middle Name:</label>
+                    <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name (optional)">
+                </div>
+
+                <div>
+                    <label for="dob">Date of Birth: *</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div>
+                    <label>Gender: *</label>
+                    <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+                        <label style="font-weight: normal;">
+                            <input type="radio" name="gender" value="male" required> Male
+                        </label>
+                        <label style="font-weight: normal;">
+                            <input type="radio" name="gender" value="female" required> Female
+                        </label>
+                        <label style="font-weight: normal;">
+                            <input type="radio" name="gender" value="other" required> Other
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="nationality">Nationality: *</label>
+                    <select id="nationality" name="nationality" required>
+                        <option value="">-- Select Nationality --</option>
+                        <option value="ugandan">Ugandan</option>
+                        <option value="kenyan">Kenyan</option>
+                        <option value="tanzanian">Tanzanian</option>
+                        <option value="rwandan">Rwandan</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <!-- Contact Information Section -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                
+                <div>
+                    <label for="email">Email Address: *</label>
+                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                </div>
+
+                <div>
+                    <label for="phone">Phone Number: *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+256 700 000 000" pattern="[+]?[0-9]{10,15}">
+                </div>
+
+                <div>
+                    <label for="altPhone">Alternative Phone Number:</label>
+                    <input type="tel" id="altPhone" name="altPhone" placeholder="+256 700 000 000" pattern="[+]?[0-9]{10,15}">
+                </div>
+
+                <div>
+                    <label for="address">Home Address: *</label>
+                    <textarea id="address" name="address" rows="3" required placeholder="Enter your full address"></textarea>
+                </div>
+
+                <div>
+                    <label for="district">District: *</label>
+                    <input type="text" id="district" name="district" required placeholder="Enter your district">
+                </div>
+            </fieldset>
+
+            <!-- Academic Information Section -->
+            <fieldset>
+                <legend>Academic Information</legend>
+                
+                <div>
+                    <label for="program">Program of Study: *</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Select Program --</option>
+                        <option value="software-engineering">Software Engineering</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="information-technology">Information Technology</option>
+                        <option value="business-administration">Business Administration</option>
+                        <option value="education">Education</option>
+                        <option value="public-health">Public Health</option>
+                        <option value="agriculture">Agriculture</option>
+                        <option value="journalism">Journalism</option>
+                        <option value="theology">Theology</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="studyLevel">Level of Study: *</label>
+                    <select id="studyLevel" name="studyLevel" required>
+                        <option value="">-- Select Level --</option>
+                        <option value="certificate">Certificate</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="undergraduate">Undergraduate (Bachelor's)</option>
+                        <option value="postgraduate">Postgraduate (Master's)</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="campus">Preferred Campus: *</label>
+                    <select id="campus" name="campus" required>
+                        <option value="">-- Select Campus --</option>
+                        <option value="bugema">Bugema Main Campus</option>
+                        <option value="kampala">Kampala Campus</option>
+                        <option value="kasese">Kasese Campus</option>
+                        <option value="arua">Arua Centre</option>
+                        <option value="mbale">Mbale Centre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="studyMode">Mode of Study: *</label>
+                    <select id="studyMode" name="studyMode" required>
+                        <option value="">-- Select Mode --</option>
+                        <option value="full-time">Full-Time</option>
+                        <option value="part-time">Part-Time</option>
+                        <option value="evening">Evening</option>
+                        <option value="weekend">Weekend</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="entryYear">Year of Entry: *</label>
+                    <input type="number" id="entryYear" name="entryYear" min="2024" max="2030" required placeholder="2024">
+                </div>
+            </fieldset>
+
+            <!-- Previous Education Section -->
+            <fieldset>
+                <legend>Previous Education</legend>
+                
+                <div>
+                    <label for="previousSchool">Previous School/Institution: *</label>
+                    <input type="text" id="previousSchool" name="previousSchool" required placeholder="Name of your previous school">
+                </div>
+
+                <div>
+                    <label for="qualification">Highest Qualification: *</label>
+                    <select id="qualification" name="qualification" required>
+                        <option value="">-- Select Qualification --</option>
+                        <option value="olevel">O-Level (UCE)</option>
+                        <option value="alevel">A-Level (UACE)</option>
+                        <option value="certificate">Certificate</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="degree">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="graduationYear">Year of Completion: *</label>
+                    <input type="number" id="graduationYear" name="graduationYear" min="1990" max="2024" required placeholder="2023">
+                </div>
+            </fieldset>
+
+            <!-- Emergency Contact Section -->
+            <fieldset>
+                <legend>Emergency Contact</legend>
+                
+                <div>
+                    <label for="emergencyName">Contact Name: *</label>
+                    <input type="text" id="emergencyName" name="emergencyName" required placeholder="Full name of emergency contact">
+                </div>
+
+                <div>
+                    <label for="relationship">Relationship: *</label>
+                    <select id="relationship" name="relationship" required>
+                        <option value="">-- Select Relationship --</option>
+                        <option value="parent">Parent</option>
+                        <option value="guardian">Guardian</option>
+                        <option value="sibling">Sibling</option>
+                        <option value="spouse">Spouse</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="emergencyPhone">Contact Phone: *</label>
+                    <input type="tel" id="emergencyPhone" name="emergencyPhone" required placeholder="+256 700 000 000" pattern="[+]?[0-9]{10,15}">
+                </div>
+
+                <div>
+                    <label for="emergencyEmail">Contact Email:</label>
+                    <input type="email" id="emergencyEmail" name="emergencyEmail" placeholder="emergency@email.com">
+                </div>
+            </fieldset>
+
+            <!-- Additional Information Section -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div>
+                    <label>Do you have any special needs or disabilities?</label>
+                    <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
+                        <label style="font-weight: normal;">
+                            <input type="radio" name="specialNeeds" value="yes"> Yes
+                        </label>
+                        <label style="font-weight: normal;">
+                            <input type="radio" name="specialNeeds" value="no" checked> No
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="specialNeedsDetails">If yes, please specify:</label>
+                    <textarea id="specialNeedsDetails" name="specialNeedsDetails" rows="3" placeholder="Describe any special needs or accommodations required"></textarea>
+                </div>
+
+                <div>
+                    <label for="interests">Extracurricular Interests:</label>
+                    <div style="margin-top: 0.5rem;">
+                        <label style="display: block; font-weight: normal; margin-bottom: 0.5rem;">
+                            <input type="checkbox" name="interests" value="sports"> Sports
+                        </label>
+                        <label style="display: block; font-weight: normal; margin-bottom: 0.5rem;">
+                            <input type="checkbox" name="interests" value="music"> Music
+                        </label>
+                        <label style="display: block; font-weight: normal; margin-bottom: 0.5rem;">
+                            <input type="checkbox" name="interests" value="debate"> Debate Club
+                        </label>
+                        <label style="display: block; font-weight: normal; margin-bottom: 0.5rem;">
+                            <input type="checkbox" name="interests" value="drama"> Drama/Theatre
+                        </label>
+                        <label style="display: block; font-weight: normal; margin-bottom: 0.5rem;">
+                            <input type="checkbox" name="interests" value="community"> Community Service
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="comments">Additional Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" placeholder="Any additional information you'd like to share"></textarea>
+                </div>
+            </fieldset>
+
+            <!-- Terms and Conditions -->
+            <fieldset>
+                <legend>Declaration</legend>
+                
+                <div>
+                    <label style="display: flex; align-items: start; gap: 0.5rem; font-weight: normal;">
+                        <input type="checkbox" name="terms" required style="margin-top: 0.25rem;">
+                        <span>I hereby declare that the information provided above is true and accurate to the best of my knowledge. I understand that providing false information may result in the cancellation of my admission. *</span>
+                    </label>
+                </div>
+
+                <div>
+                    <label style="display: flex; align-items: start; gap: 0.5rem; font-weight: normal;">
+                        <input type="checkbox" name="privacy" required style="margin-top: 0.25rem;">
+                        <span>I agree to the university's privacy policy and consent to the processing of my personal data for admission purposes. *</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Form Buttons -->
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <input type="submit" value="Submit Registration">
+                <input type="reset" value="Clear Form">
+            </div>
+
+        </form>
+
+    </main>
+</body>
+
+</html>
